@@ -58,6 +58,14 @@ list-style: none;
 }
 /* шапка сайта */
 
+.site-nav {
+    display: flex;
+}
+
+.site-nav li {
+margin-right: 50px;
+}
+
 .container-head {
     width: 1170px;
     padding-left: 15px;
