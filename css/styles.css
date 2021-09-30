@@ -30,8 +30,8 @@ body {
     letter-spacing: 0.03em;
 }
 
-.container {
-    width: 1170px;
+.container, .container-portfolio {
+    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -43,6 +43,7 @@ body {
 
 
 .list,
+.connection,
 .benefit-list,
 .feature-list,
 .team-list,
@@ -58,21 +59,52 @@ list-style: none;
 }
 /* шапка сайта */
 
-.site-nav {
+
+.site-nav,
+.contact-list {
     display: flex;
 }
 
-.site-nav li {
+/* .site-nav .item {
 margin-right: 50px;
 }
 
+.site-nav .item:last-child {
+margin: 0;
+} */
+
+.site-nav .item:not(:last-child),
+.contact-list .connection:not(:last-child) {
+    margin-right: 50px;
+}
+
+/* .site-nav .item + .item {
+    margin-left: 40px;
+} */
+
+
+.site-nav .link,
+.contact-list .contact-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+
 .container-head {
+    display: flex;
+    align-items: center;
     width: 1170px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    outline: 2px solid red;
+
+}
+
+.all-nav {
+    display: flex;
+    align-items: center;
 }
 
 .page-header { 
@@ -94,6 +126,7 @@ margin-right: 50px;
     text-decoration: none;
     font-size: 26px;
 line-height: 1.19;
+
 }
 .logo-black {
     color: #000000; 
@@ -103,6 +136,9 @@ line-height: 1.19;
 }
 /* site nav */
 
+.site-nav {
+    margin-left: 93px;
+}
 .site-nav, .contact-link {
 font-weight: 500;
 font-size: 14px;
@@ -126,10 +162,15 @@ color: var(--accent-color);
 
 /* контакты */
 
+.contact-list {
+    margin-left: auto;
+}
+
 
 .contact-link {
     color: var(--primery-text-color);
      text-decoration: none;
+    
 }
 
 .contact-link:hover,
@@ -188,6 +229,10 @@ letter-spacing: 0.06em;
 
 /* преимущества */
 
+.benefit-list {
+    display: flex;
+}
+
 .benefit p {
 font-size: 14px;
 line-height: 1.71;
@@ -200,11 +245,29 @@ line-height: 1.71;
 line-height: 1.14;
 margin-bottom: 10px;
 }
+
+.benefit-text {
+    width: 270px;
+}
+
+.benefit-option:not(:last-child) {
+    margin-right: 30px;
+}
+
+
 /* функциии */
 
-.feature-title{
+.feature-list {
+    display: flex;
+}
 
-margin-bottom: 50px;
+.feature-title {
+
+margin-right: 50px;
+}
+
+.feature-images:not(:last-child) {
+    margin-right: 30px;
 }
 
 
@@ -234,6 +297,15 @@ margin-bottom: 10px;
     margin-bottom: 30px;
 }
 
+.team-list {
+    display: flex;
+}
+
+.team-dudes:not(:last-child) {
+    margin-right: 30px;
+}
+
+
 .benefit-title, 
 .feature-title,
 .team-title {
@@ -241,7 +313,10 @@ margin-bottom: 10px;
 font-size: 36px;
 line-height: 1.16;
 text-align: center;
+margin-bottom: 50px;
 }
+
+
 
 /* футер */
 
@@ -271,6 +346,8 @@ color: var(--accent-color)
 
 
 /* Стили для portfolio.html  */
+
+
 
 .portfolio-title {
     color: var(--title-text-color);
@@ -302,6 +379,7 @@ letter-spacing: 0.06em;
 
 
 .criteria {
+    display: flex;
     font-weight: 500;
 font-size: 16px;
 line-height: 1.62;
@@ -311,11 +389,43 @@ margin-left: auto;
 margin-right: auto;
 }
 
+.criteria {
+    justify-content: center;
+}
+
+
+.criteria-btn:not(:last-child) {
+ margin-right: 8px;
+}
+
 .portfolio h2 {
     margin-bottom: 4px;
 }
 .portfolio p {
 font-size: 16px;
 line-height: 1.87;
-outline: 2px solid red;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+
+.portfolio-elements {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.portfolio-elements:nth-child(3n) {
+    margin-right: 0;
+}
+
+.portfolio-elements:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+}
+
+.container-portfolio {
+    margin-bottom: 94px;
 }
